@@ -57,6 +57,14 @@ function App() {
     setSymbols((symbols) => shuffle(symbols));
   };
 
+  const reset = function (event) {
+    event.preventDefault();
+    setScore((score) => 0);
+    setTopScore((topScore) => 0);
+    setStatus((status) => "Pick a card.");
+    shuffle(symbols);
+  }
+
   return (
     <div className="App">
       <GameBoard
@@ -65,6 +73,7 @@ function App() {
         status={status}
         symbols={symbols}
         handleClick={handleClick}
+        reset={reset}
       />
     </div>
   );

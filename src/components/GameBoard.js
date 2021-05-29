@@ -10,7 +10,7 @@ const GameBoard = (props) => {
         <p id="description" className="description">
           Don't choose the same card twice!
         </p>
-        <button id="reset" className="btn">
+        <button id="reset" className="btn" onClick={props.reset}>
           Reset
         </button>
       </header>
