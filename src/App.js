@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import GameBoard from "./components/GameBoard";
+import Cards from "./components/Cards";
+import "./App.scss";
 
 function App() {
+  const [clicked, setClicked] = useState([]);
+
+  const handleClick = function (event) {
+    const { id } = event.target;
+    setClicked((clicked) => [...clicked, id]);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GameBoard />
+      <Cards handleClick={handleClick} />
+      {clicked}
     </div>
   );
 }
