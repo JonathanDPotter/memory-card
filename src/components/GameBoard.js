@@ -14,10 +14,20 @@ const GameBoard = (props) => {
       </header>
       <div id="play-field" className="playfield">
         <div id="scorebox-1" className="scorebox">
-          Score
+          <h1 id="score-title" className="score-title">
+            Score
+          </h1>
+          <h1 id="score" className="score">
+            {props.score}
+          </h1>
         </div>
         <div id="scorebox-2" className="scorebox">
-          Top Score
+          <h1 id="top-score-title" className="score-title">
+            Top Score
+          </h1>
+          <h1 id="top-score" className="score">
+            {props.topScore}
+          </h1>
         </div>
         <div id="card-box" className="card-box"></div>
       </div>
