@@ -14,27 +14,29 @@ const GameBoard = (props) => {
           Reset
         </button>
       </header>
-      <div id="play-field" className="playfield">
-        <div id="scorebox-1" className="scorebox">
-          <h1 id="score-title" className="score-title">
-            Score
-          </h1>
-          <h1 id="score" className="score">
-            {props.score}
-          </h1>
-        </div>
-        <div id="scorebox-2" className="scorebox">
-          <h1 id="top-score-title" className="score-title">
-            Top Score
-          </h1>
-          <h1 id="top-score" className="score">
-            {props.topScore}
-          </h1>
+      <div id="play-field" className="play-field">
+        <div id="scores" className="scores">
+          <div id="scorebox-1" className="scorebox">
+            <h1 id="score-title" className="score-title">
+              Score
+            </h1>
+            <h1 id="score" className="score">
+              {props.score}
+            </h1>
+          </div>
+          <div id="scorebox-2" className="scorebox">
+            <h1 id="top-score-title" className="score-title">
+              Top Score
+            </h1>
+            <h1 id="top-score" className="score">
+              {props.topScore}
+            </h1>
+          </div>
         </div>
         <div id="card-box" className="card-box">
           <Cards handleClick={props.handleClick} symbols={props.symbols} />
         </div>
-        <div id="status-box" className="status-box">
+        <div id="status-box" className={props.status !== "You lose" ? "status-box": "status-box red"}>
           {props.status}
         </div>
       </div>

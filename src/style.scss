@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "Good Times Rg";
+  src: url("./fonts/GoodTimesRg-Regular.woff2") format("woff2"),
+    url("./fonts/GoodTimesRg-Regular.woff") format("woff"),
+    url("./fonts/GoodTimesRg-Regular.svg") format("svg");
+}
+
+* {
+  margin: 0;
+  top: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.full-page {
+  font-family: "Good Times Rg";
+  min-height: 100vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  overflow-x: none;
+}
+
+header {
+  border: 5px solid white;
+  border-radius: 5px;
+  height: 10vh;
+  width: 90%;
+  max-width: 900px;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  #title {
+    font-size: 2rem;
+  }
+  p {
+    color: darkred;
+  }
+  button {
+    height: 7vh;
+    width: 7vh;
+    background-color: inherit;
+    color: inherit;
+    border: inherit;
+    border-radius: inherit;
+    font-family: inherit;
+
+    &:hover {
+      background-color: rgb(43, 43, 43);
+      cursor: pointer;
+    }
+  }
+}
+
+#play-field {
+  max-width: 800px;
+  padding: 2rem;
+  margin: 0 auto;
+  text-align: center;
+  .scores {
+    display: flex;
+    justify-content: space-around;
+    .scorebox {
+      border: 5px solid white;
+      border-radius: 5px;
+      width: 10rem;
+      height: 10rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: .2rem;
+      text-align: center;
+      .score {
+        font-size: 4rem;
+      }
+    }
+  }
+  #cards {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 60%;
+    max-width: 500px;
+    .card {
+      border: 5px solid white;
+      border-radius: 5px;
+      height: 6rem;
+      width: 6rem;
+      margin: 2rem auto;
+      text-align: center;
+      font-size: 4rem;
+      line-height: 5rem;
+      user-select: none;
+      &:hover {
+        background-color: rgb(43, 43, 43);
+        cursor: pointer;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .status-box {
+    font-size: 3rem;
+  }
+}
+
+.red {
+  color: darkred;
+}
+
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 65%;
+  }
+}

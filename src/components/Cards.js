@@ -11,7 +11,7 @@ const Cards = (props) => {
     );
   };
 
-  return <div id="cards">{props.symbols.map((sym, i) => makeCards(sym, i))}</div>;
+  return <div id="cards" className="cards">{props.symbols.map((sym, i) => makeCards(sym, i))}</div>;
 };
 
 export default Cards;
