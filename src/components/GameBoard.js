@@ -1,3 +1,5 @@
+import Cards from "./Cards";
+
 const GameBoard = (props) => {
   return (
     <div id="full-page" className="full-page">
@@ -29,7 +31,12 @@ const GameBoard = (props) => {
             {props.topScore}
           </h1>
         </div>
-        <div id="card-box" className="card-box"></div>
+        <div id="card-box" className="card-box">
+          <Cards handleClick={props.handleClick} symbols={props.symbols} />
+        </div>
+        <div id="status-box" className="status-box">
+          {props.status}
+        </div>
       </div>
     </div>
   );

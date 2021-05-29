@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import GameBoard from "./components/GameBoard";
-import Cards from "./components/Cards";
 import "./App.scss";
 
 function App() {
   const [score, setScore] = useState(0),
     [topScore, setTopScore] = useState(0),
     [clicked, setClicked] = useState([]),
+    [status, setStatus] = useState("Pick a card."),
     [symbols, setSymbols] = useState([
       "!",
       "@",
@@ -47,19 +47,25 @@ function App() {
         setTopScore((topScore) => score);
       }
       setScore((score) => 0);
-      setClicked((clicked) => [])
+      setClicked((clicked) => []);
+      setStatus((status) => "You lose.");
     } else {
-      setScore((score) => score + 1)
+      setScore((score) => score + 1);
       setClicked((clicked) => [...clicked, id]);
+      setStatus((status) => "Pick a card.")
     }
     setSymbols((symbols) => shuffle(symbols));
   };
 
   return (
     <div className="App">
-      <GameBoard score={score} topScore={topScore} />
-      <Cards handleClick={handleClick} symbols={symbols} />
-      {clicked}
+      <GameBoard
+        score={score}
+        topScore={topScore}
+        status={status}
+        symbols={symbols}
+        handleClick={handleClick}
+      />
     </div>
   );
 }
