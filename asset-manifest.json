@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/memory-card/static/css/main.9a32cf9b.chunk.css",
+    "main.css": "/memory-card/static/css/main.2386033b.chunk.css",
     "main.js": "/memory-card/static/js/main.a2860d21.chunk.js",
     "main.js.map": "/memory-card/static/js/main.a2860d21.chunk.js.map",
     "runtime-main.js": "/memory-card/static/js/runtime-main.714dd9e2.js",
@@ -8,14 +8,14 @@
     "static/js/2.da23fa44.chunk.js": "/memory-card/static/js/2.da23fa44.chunk.js",
     "static/js/2.da23fa44.chunk.js.map": "/memory-card/static/js/2.da23fa44.chunk.js.map",
     "index.html": "/memory-card/index.html",
-    "static/css/main.9a32cf9b.chunk.css.map": "/memory-card/static/css/main.9a32cf9b.chunk.css.map",
+    "static/css/main.2386033b.chunk.css.map": "/memory-card/static/css/main.2386033b.chunk.css.map",
     "static/js/2.da23fa44.chunk.js.LICENSE.txt": "/memory-card/static/js/2.da23fa44.chunk.js.LICENSE.txt",
     "static/media/style.scss": "/memory-card/static/media/GoodTimesRg-Regular.ee87ccc4.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.714dd9e2.js",
     "static/js/2.da23fa44.chunk.js",
-    "static/css/main.9a32cf9b.chunk.css",
+    "static/css/main.2386033b.chunk.css",
     "static/js/main.a2860d21.chunk.js"
   ]
 }
